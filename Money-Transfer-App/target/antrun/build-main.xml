@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <exec spawn="true" dir="E:\Workspace\Money-Transfer-App\target" executable="C:\Program Files\Java\jdk1.8.0_211\jre/bin/java">
+    <arg value="-jar"/>
+    <arg value="Money-Transfer-App-0.0.1-SNAPSHOT-exec.jar"/>
+  </exec>
+</target>
+</project>
