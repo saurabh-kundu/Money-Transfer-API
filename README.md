@@ -3,14 +3,16 @@ A simple light weight money transfer API app
 
 # Technology stack
 
+```bash
 Java 8
 Maven
 RESTful API
 Vert.x framework
 Json
 H2-in memory Database
-Junit4 for unit testing along with Mockito and PowerMockito
+Junit4, Mockito and PowerMockito for Unit Tetsing
 RestAssured for integration testing
+```
 
 ## Building And Running
 
