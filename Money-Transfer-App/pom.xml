@@ -17,6 +17,16 @@
 			<name>Maven repository</name>
 			<url>http://repo1.maven.org/maven2</url>
 		</repository>
+		<repository>
+			<id>gatehillsoftware-snapshots</id>
+			<name>Gatehill Software Snapshots</name>
+			<url>https://s3-eu-west-1.amazonaws.com/gatehillsoftware-maven/snapshots</url>
+		</repository>
+		<repository>
+			<id>sonatype-snapshots</id>
+			<name>Sonatype OSS Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -100,6 +110,12 @@
 			<artifactId>powermock-api-mockito</artifactId>
 			<version>1.7.4</version>
 			<scope>test</scope>
+		</dependency>
+		<!--  generating swagger specs with vertx -->
+		<dependency>
+			<groupId>com.gatehill.vertx-oas</groupId>
+			<artifactId>vertx-oas</artifactId>
+			<version>1.0.1</version>
 		</dependency>
 	</dependencies>
 

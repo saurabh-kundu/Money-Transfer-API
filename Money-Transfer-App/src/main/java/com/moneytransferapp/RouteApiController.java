@@ -2,6 +2,7 @@ package com.moneytransferapp;
 
 import java.sql.SQLException;
 
+import com.gatehill.vertxoas.RouterSpecGenerator;
 import com.moneytransferapp.createTable.service.CreateInitialTableService;
 import com.moneytransferapp.moneytransfer.controller.AccountController;
 import com.moneytransferapp.moneytransfer.controller.TransferMoneyController;
@@ -15,7 +16,7 @@ import io.vertx.ext.web.handler.BodyHandler;
 import io.vertx.ext.web.handler.StaticHandler;
 
 /**
- * Routes the recieved rest apis to respective controller
+ * Routes the received rest APIs to respective controller
  */
 public class RouteApiController {
 
@@ -72,6 +73,8 @@ public class RouteApiController {
 		router.post(CONTEXT_ROOT+"/withdraws/:withdrawAccountId/:balance").handler(withdrawContext -> {
 			transferMoneyController.withdrawBalance(withdrawContext);
 		});
+		
+		RouterSpecGenerator.publishApiDocs(router, "/api/spec");
 	}
 
 	public AccountService getAccountService() {
